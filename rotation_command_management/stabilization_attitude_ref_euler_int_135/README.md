@@ -2,5 +2,5 @@ File: /paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_at
 Line: 135
 Function: RATES_BOUND
 var: ref-> accel
-status: DIFFERENT
-Notes: Removing can cause the UAV to flip while under RC command, by allowing larger roll changes than should be.
+status: N/A
+Notes: Unable to simulate because there were no simulated targets for this module.
