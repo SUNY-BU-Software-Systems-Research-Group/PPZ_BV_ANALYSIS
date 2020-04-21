@@ -1,5 +1,5 @@
 File: /paparazzi/sw/airborne/firmwares/fixedwing/guidance/energy_ctrl.c
-Line: 434
+Line: 455
 Function: BoundAbs
 var: diff_throttle
 status: Diff

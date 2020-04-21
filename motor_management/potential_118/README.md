@@ -1,5 +1,5 @@
-sw/airborne/modules/helicopter/swashplate_mixing.c
-Line: 89
+File: paparazzi/sw/airborne/modules/multi/potential.c
+Line: 118
 Function: Bound
 var: cruise
 status: N/A
