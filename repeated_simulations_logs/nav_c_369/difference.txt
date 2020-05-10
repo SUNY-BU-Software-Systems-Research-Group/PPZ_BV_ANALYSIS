@@ -1,0 +1,2 @@
+* Difference: with BF, it flys in circle around p1; otherwise, flies abnormally around p1
+* Property location in log: DESIRED->y VS NAVIGATION->pos_y (or DESIRED->x VS NAVIGATION->pos_x)

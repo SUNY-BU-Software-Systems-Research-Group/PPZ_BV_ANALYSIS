@@ -1,0 +1,2 @@
+* Difference: Without BF, the UAV can't fly to target waypoint and the thrust is changing exceessively according to log plotter
+* Property location in log: ROTORCRAFT_FP -> carrot_east VS ROTORCRAFT_FP -> east

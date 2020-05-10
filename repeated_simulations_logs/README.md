@@ -1,0 +1,1 @@
+This is a folder that stores simulation logs for repeated simulations. Since repeated simulation serves as a way to eliminate accidentia that causes simulation differences, we only perform repeated simulations over those Bounding Function instances whose single simulation results show any difference. 

@@ -1,0 +1,2 @@
+* Difference: Without BF, the waypoint AF is moved to a position far away
+* Property location in log: DESIRED->y VS NAVIGATION->pos_y
