@@ -1,3 +1,3 @@
 * Difference: the carrot would move over the routine in absence of BF
 * Property location in log: ROTORCRAFT_fp->carrot_east VS ROTORCRAFT_fp->east
-	- Note: for alignment, we only consider the simulation log during time 100s ~ 130s (landing process of normal cases). You can also refer to "nav_gls_104_all_logs.JPG" to have a more direct view of the simulation results
+	- Note: we only consider the last 5s in the simulation log (when the carrots moves exceeding the routine) because we're only interested in the carrot's behavior of exceeding routine. You can also refer to "naigation_599_all_logs.png" to have a more direct view of the simulation results
