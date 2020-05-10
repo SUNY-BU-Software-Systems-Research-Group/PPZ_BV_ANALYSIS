@@ -1,0 +1,3 @@
+* Difference: with BF, it flys in circle around CAM; otherwise, flies in oval around p2
+* Property location in log: ROTORCRAFT_fp->carrot_east VS ROTORCRAFT_fp->east
+
