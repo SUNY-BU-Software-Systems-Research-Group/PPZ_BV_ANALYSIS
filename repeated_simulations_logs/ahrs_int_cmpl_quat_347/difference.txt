@@ -1,0 +1,2 @@
+* Difference: With BF, the UAV will fly over waypoint H2 without stopping but would stop at H5 when turning around; without BF, the UAV will stop at H2 before flying to H3 but can't stop at H5 when turning around.
+* Property location in log: ROTORCRAFT_FP -> carrot_east VS ROTORCRAFT_FP -> east
