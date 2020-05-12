@@ -1,0 +1,3 @@
+* Difference: Without BF, the UAV is unable to limit its altitute and continues increasing in altitude when starting engine.
+* Property location in log: ROTORCRAFT_FP -> carrot_east VS ROTORCRAFT_FP -> east 
+	(or consider directly comparing GPS_INT->alt of with BF VS GPS_INT->alt of without BF)
