@@ -1,0 +1,2 @@
+* Difference: Without BF, the UAV's desired roll value would exceed the intended bounds.
+* Property location in log: DESIRED->roll VS ATTITUDE->phi
