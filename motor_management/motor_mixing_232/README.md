@@ -1,4 +1,4 @@
-File: /paparazzi/sw/airborne/subsystems/motor_mixing.c
+File: /paparazzi/sw/airborne/subsystems/actuators/motor_mixing.c
 Line: 232
 Function: BoundAbs
 var: bounded_yaw_cmd
