@@ -1,0 +1,3 @@
+* Difference: When removing both of these bounds we achieve a higher speed during takeoff. Since these variables are related to vertical speed and acceleration, removing these bounds directly impacts their functionality.
+* Property location in log: DESIRED->airspeed VS GPS->speed
+	- Note: we only consider 10s~50s (when UAV is taking off)
