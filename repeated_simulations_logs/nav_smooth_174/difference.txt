@@ -1,2 +1,2 @@
 * Difference: the changes of radius are different according to log plotter
-* Property location in log: DESIRED->y VS NAVIGATION->pos_y (or DESIRED->x VS NAVIGATION->pos_x)
+* Property location in log: DESIRED->y of with BF case VS DESIRED->y of without BF case

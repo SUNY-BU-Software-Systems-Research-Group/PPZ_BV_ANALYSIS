@@ -1,2 +1,3 @@
 * Difference: Without BF, the UAV starts with a relatively higher speed and cannot stop at waypoint H2 before flying to the next waypoint H3, but would stop at H5 when turning around; with BF, the UAV can fly towards and stop at H2, but can't stop at H5 when turning around.
 * Property location in log: ROTORCRAFT_FP -> carrot_east VS ROTORCRAFT_FP -> east
+	- Note: only consider 15s~25s (when the UAV flys over H2 in abnormal case)

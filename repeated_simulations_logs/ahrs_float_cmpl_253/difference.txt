@@ -1,0 +1,3 @@
+* Difference: Without BF, there's a sharp decrement on rate attitude on p and r before changing back to normal value when the UAV is about to turn around; with BF, it only declines slightly.
+* Property location in log: NPS_RATE_ATTITUDE:p of simulation with BF VS NPS_RATE_ATTITUDE:p of simulation without BF 
+	- Note: only consider 85s~95s (when the UAV turns around)
