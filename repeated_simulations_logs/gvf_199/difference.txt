@@ -1,2 +1,2 @@
-* Difference: Without BF, the UAV's desired roll value would exceed the intended bounds.
+* Difference: As is shown in "desired_roll.png", without BF, the UAV's desired roll values would exceed the intended bounds, while those of the with BF cases are kept within the bounds.
 * Property location in log: DESIRED->roll VS ATTITUDE->phi

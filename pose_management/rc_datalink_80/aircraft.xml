@@ -15,6 +15,7 @@
     </target>
 
 	  <!-- Subsystem section -->
+
     <module name="telemetry" type="transparent_udp"/>
     <module name="radio_control" type="datalink"/>
     <module name="motor_mixing"/>
@@ -27,6 +28,8 @@
     </module>
     <module name="gps" type="ublox"/>
     <module name="stabilization" type="indi_simple"/>
+
+
     <module name="ins" type="ekf2"/>
     
     <module name="air_data"/>
