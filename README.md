@@ -8,5 +8,7 @@ There are three main components in this repository:
 
 Generating multi-variable figures for cross flight simulation can be done with...
 
-```$cd cross_sim_figures
-$bash create_figures.sh```
+```
+$cd cross_sim_figures
+$bash create_figures.sh
+```
