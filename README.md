@@ -5,4 +5,6 @@ There are three main components in this repository:
 * other folders: stores case-by-case analysis of bounded variables in paparazzi codebase
 
 Generating multi-variable figures for cross flight simulation can be done with...
-$bash cross_sim_figures/create_figures.sh
+
+$cd cross_sim_figures
+$bash create_figures.sh
