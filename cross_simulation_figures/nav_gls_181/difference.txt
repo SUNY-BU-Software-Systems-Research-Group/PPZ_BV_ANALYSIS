@@ -1,0 +1,3 @@
+* Difference: the desired altitude at the end of landing process are different according to log plotter
+* Property location in log: DESIRED -> altitude of abnormal cases VS DESIRED -> altitude of normal cases
+	- Note: for alignment, we only consider the simulation log during time 125s ~ 130s (end of landing process). You can also refer to "nav_gls_181_all_logs.JPG" to have a more direct view of the simulation results

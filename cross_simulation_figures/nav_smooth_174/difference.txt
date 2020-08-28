@@ -1,0 +1,2 @@
+* Difference: the changes of radius are different according to log plotter
+* Property location in log: DESIRED->y of with BF case VS DESIRED->y of without BF case
