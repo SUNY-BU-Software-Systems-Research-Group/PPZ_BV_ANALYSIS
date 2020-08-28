@@ -199,7 +199,7 @@
     <module name="nav" type="bungee_takeoff"/>
 
 
-    <module name="nav" type="gls"/> <!-- Joezie 2020/05/09 NEW -->
+    <module name="nav" type="gls"/> <!--  2020/05/09 NEW -->
 
   </firmware>
 

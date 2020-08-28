@@ -343,7 +343,7 @@ static inline void nav_set_altitude(void)
   }
 }
 
-#include <stdio.h> // joezie 2020/04/08 NEW
+#include <stdio.h> //  2020/04/08 NEW
 /** Reset the geographic reference to the current GPS fix */
 void nav_reset_reference(void)
 {
@@ -399,7 +399,7 @@ void navigation_update_wp_from_speed(uint8_t wp, struct Int16Vect3 speed_sp, int
   delta_heading = delta_heading >> (INT32_SPEED_FRAC - INT32_POS_FRAC);
   nav_heading += delta_heading;
 
-  INT32_COURSE_NORMALIZE(nav_heading); // joezie 2020/03/22 ORIGINAL
+  INT32_COURSE_NORMALIZE(nav_heading); //  2020/03/22 ORIGINAL
 
   RunOnceEvery(10, DOWNLINK_SEND_WP_MOVED_ENU(DefaultChannel, DefaultDevice, &wp,
                &(waypoints[wp].enu_i.x),
@@ -486,7 +486,7 @@ void compute_dist2_to_home(void)
 void nav_set_heading_rad(float rad)
 {
   nav_heading = ANGLE_BFP_OF_REAL(rad);
-  INT32_COURSE_NORMALIZE(nav_heading); // joezie 2020/03/22 ORIGINAL
+  INT32_COURSE_NORMALIZE(nav_heading); //  2020/03/22 ORIGINAL
 }
 
 /** Set nav_heading in degrees. */
@@ -554,7 +554,7 @@ void nav_circle(struct EnuCoor_i *wp_center, int32_t radius)
     // increment circle radians
     if (nav_circle_radians != 0) {
       int32_t angle_diff = nav_circle_qdr - last_qdr;
-      INT32_ANGLE_NORMALIZE(angle_diff); // joezie 2020/03/30 ORIGINAL
+      INT32_ANGLE_NORMALIZE(angle_diff); //  2020/03/30 ORIGINAL
 
       nav_circle_radians += angle_diff;
     } else {
@@ -568,7 +568,7 @@ void nav_circle(struct EnuCoor_i *wp_center, int32_t radius)
     int32_t abs_radius = abs(radius);
     // carrot_angle
     int32_t carrot_angle = ((CARROT_DIST << INT32_ANGLE_FRAC) / abs_radius);
-    Bound(carrot_angle, (INT32_ANGLE_PI / 16), INT32_ANGLE_PI_4); // joezie 2020/03/18 ORIGINAL
+    Bound(carrot_angle, (INT32_ANGLE_PI / 16), INT32_ANGLE_PI_4); //  2020/03/18 ORIGINAL
     carrot_angle = nav_circle_qdr - sign_radius * carrot_angle;
     int32_t s_carrot, c_carrot;
     PPRZ_ITRIG_SIN(s_carrot, carrot_angle);
@@ -595,12 +595,12 @@ void nav_route(struct EnuCoor_i *wp_start, struct EnuCoor_i *wp_end)
   INT32_VECT2_RSHIFT(pos_diff, pos_diff, INT32_POS_FRAC);
   uint32_t leg_length2 = Max((wp_diff.x * wp_diff.x + wp_diff.y * wp_diff.y), 1);
   nav_leg_length = int32_sqrt(leg_length2);
-  // nav_leg_progress = (pos_diff.x * wp_diff.x + pos_diff.y * wp_diff.y) / nav_leg_length; // joezie 2020/03/22 ORIGINAL
-  nav_leg_progress = (pos_diff.x * wp_diff.x + pos_diff.y * wp_diff.y) / (int32_t)nav_leg_length; // joezie 2020/03/22 NEW
+  // nav_leg_progress = (pos_diff.x * wp_diff.x + pos_diff.y * wp_diff.y) / nav_leg_length; //  2020/03/22 ORIGINAL
+  nav_leg_progress = (pos_diff.x * wp_diff.x + pos_diff.y * wp_diff.y) / (int32_t)nav_leg_length; //  2020/03/22 NEW
   int32_t progress = Max((CARROT_DIST >> INT32_POS_FRAC), 0);
   nav_leg_progress += progress;
   int32_t prog_2 = nav_leg_length;
-  Bound(nav_leg_progress, 0, prog_2); // joezie 2020/03/21 ORIGINAL
+  Bound(nav_leg_progress, 0, prog_2); //  2020/03/21 ORIGINAL
   struct Int32Vect2 progress_pos;
   VECT2_SMUL(progress_pos, wp_diff_prec, ((float)nav_leg_progress) / nav_leg_length);
   VECT2_SUM(navigation_target, *wp_start, progress_pos);

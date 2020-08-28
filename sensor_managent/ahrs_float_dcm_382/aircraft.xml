@@ -25,16 +25,16 @@
       <module name="fdm" type="jsbsim"/>
     </target>
 
-    <define name="USE_MAGNETOMETER" value="FALSE"/> <!-- joezie 2020/04/21 ORIGINAL -->
+    <define name="USE_MAGNETOMETER" value="FALSE"/> <!--  2020/04/21 ORIGINAL -->
 
     <module name="radio_control" type="ppm"/>
     <module name="telemetry" type="transparent"/>
     <module name="control"/>
     <module name="imu" type="aspirin_v2.1"/>
-    <module name="ahrs" type="float_dcm"/> <!-- joezie 2020/04/13 ORIGINAL -->
+    <module name="ahrs" type="float_dcm"/> <!--  2020/04/13 ORIGINAL -->
     <module name="gps" type="ublox"/>
     <module name="navigation"/>
-    <module name="ins" type="alt_float"/> <!-- joezie 2020/04/15 ORIGINAL -->
+    <module name="ins" type="alt_float"/> <!--  2020/04/15 ORIGINAL -->
 
   </firmware>
 

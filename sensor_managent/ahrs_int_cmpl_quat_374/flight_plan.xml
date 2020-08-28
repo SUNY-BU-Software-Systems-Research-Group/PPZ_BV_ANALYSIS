@@ -20,13 +20,13 @@
     <waypoint name="_3" x="100" y="200"/>
     <waypoint name="_4" x="100" y="0"/>
     <waypoint name="CLIMB" x="-122.5" y="35.4"/>
-    <waypoint name="H1" x="5.0" y="100.0" alt="500.0"/>  <!-- joezie 2020/04/13 NEW -->
-    <waypoint name="H2" x="5.0" y="300.0" alt="300.0"/>  <!-- joezie 2020/04/13 NEW -->
-    <waypoint name="H3" x="5.0" y="500.0" alt="500.0"/>  <!-- joezie 2020/04/13 NEW -->
-    <waypoint name="H4" x="5.0" y="700.0" alt="300.0"/>  <!-- joezie 2020/04/13 NEW -->
-    <waypoint name="H5" x="5.0" y="900.0" alt="500.0"/>  <!-- joezie 2020/04/13 NEW -->
-    <waypoint name="H6" x="5.0" y="1100.0" alt="300.0"/>  <!-- joezie 2020/04/13 NEW -->
-    <waypoint name="H7" x="5.0" y="1300.0" alt="500.0"/>  <!-- joezie 2020/04/13 NEW -->
+    <waypoint name="H1" x="5.0" y="100.0" alt="500.0"/>  <!--  2020/04/13 NEW -->
+    <waypoint name="H2" x="5.0" y="300.0" alt="300.0"/>  <!--  2020/04/13 NEW -->
+    <waypoint name="H3" x="5.0" y="500.0" alt="500.0"/>  <!--  2020/04/13 NEW -->
+    <waypoint name="H4" x="5.0" y="700.0" alt="300.0"/>  <!--  2020/04/13 NEW -->
+    <waypoint name="H5" x="5.0" y="900.0" alt="500.0"/>  <!--  2020/04/13 NEW -->
+    <waypoint name="H6" x="5.0" y="1100.0" alt="300.0"/>  <!--  2020/04/13 NEW -->
+    <waypoint name="H7" x="5.0" y="1300.0" alt="500.0"/>  <!--  2020/04/13 NEW -->
   </waypoints>
   <sectors>
     <sector name="Square">
@@ -208,6 +208,6 @@
       <go from="H3" hmode="route" wp="H2"/>
       <go from="H2" hmode="route" wp="H1"/>
       <stay wp="HOME"/>
-    </block> <!-- joezie 2020/04/13 NEW -->
+    </block> <!--  2020/04/13 NEW -->
   </blocks>
 </flight_plan>

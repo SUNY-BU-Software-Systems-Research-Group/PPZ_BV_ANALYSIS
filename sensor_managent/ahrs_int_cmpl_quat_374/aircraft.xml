@@ -31,7 +31,7 @@
     <module name="telemetry" type="transparent"/>
     <module name="control"/>
     <module name="imu" type="aspirin_v2.1"/>
-    <!-- <module name="ahrs" type="float_dcm"/> --> <!-- joezie 2020/04/13 ORIGINAL -->
+    <!-- <module name="ahrs" type="float_dcm"/> --> <!--  2020/04/13 ORIGINAL -->
     <module name="gps" type="ublox"/>
     <module name="navigation"/>
     <module name="ins" type="alt_float"/>
@@ -49,7 +49,7 @@
         <define name="AHRS_ICQ_MAG_ID" value="MAG_CALIB_UKF_ID" />
         <define name="AHRS_GRAVITY_HEURISTIC_FACTOR" value="300"/>
     </module>
-    <!-- joezie 2020/04/13 NEW --> 
+    <!--  2020/04/13 NEW --> 
 
   </firmware>
 
@@ -59,7 +59,7 @@
     <define name="H_Y" value="0.02054"/>
     <define name="H_Z" value="0.92209"/>
   </section>
-  <!-- joezie 2020/04/13 NEW --> 
+  <!--  2020/04/13 NEW --> 
 
   <modules>
     <module name="nav" type="line"/>

@@ -4,8 +4,8 @@
   <header>
 #include "subsystems/datalink/datalink.h"
 #include "modules/digital_cam/dc.h"
-// #define LINE_START_FUNCTION dc_Survey(40); // joezie 2020/04/05 ORIGINAL
-// #define LINE_STOP_FUNCTION dc_autoshoot = DC_AUTOSHOOT_STOP; // joezie 2020/04/05 ORIGINAL
+// #define LINE_START_FUNCTION dc_Survey(40); //  2020/04/05 ORIGINAL
+// #define LINE_STOP_FUNCTION dc_autoshoot = DC_AUTOSHOOT_STOP; //  2020/04/05 ORIGINAL
 </header>
   <waypoints>
     <waypoint name="HOME" x="0" y="0"/>

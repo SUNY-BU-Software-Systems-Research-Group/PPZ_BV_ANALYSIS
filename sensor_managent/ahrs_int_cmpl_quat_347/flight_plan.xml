@@ -15,11 +15,11 @@
     <waypoint name="p4" x="13.7" y="-40.7"/>
     <waypoint name="CAM" x="-20" y="-50" height="2."/>
     <waypoint name="TD" x="5.6" y="-10.9"/>
-    <waypoint name="H1" x="5.0" y="10.0" alt="220.0"/>  <!-- joezie 2020/03/30 NEW -->
-    <waypoint name="H2" x="5.0" y="15.0" alt="500.0"/>  <!-- joezie 2020/03/30 NEW -->
-    <waypoint name="H3" x="5.0" y="25.0" alt="300.0"/>  <!-- joezie 2020/03/30 NEW -->
-    <waypoint name="H4" x="5.0" y="30.0" alt="400.0"/>  <!-- joezie 2020/03/30 NEW -->
-    <waypoint name="H5" x="5.0" y="50.0" alt="200.0"/>  <!-- joezie 2020/03/30 NEW -->
+    <waypoint name="H1" x="5.0" y="10.0" alt="220.0"/>  <!--  2020/03/30 NEW -->
+    <waypoint name="H2" x="5.0" y="15.0" alt="500.0"/>  <!--  2020/03/30 NEW -->
+    <waypoint name="H3" x="5.0" y="25.0" alt="300.0"/>  <!--  2020/03/30 NEW -->
+    <waypoint name="H4" x="5.0" y="30.0" alt="400.0"/>  <!--  2020/03/30 NEW -->
+    <waypoint name="H5" x="5.0" y="50.0" alt="200.0"/>  <!--  2020/03/30 NEW -->
   </waypoints>
   <blocks>
     <block name="Wait GPS">
@@ -102,7 +102,7 @@
       <go from="H3" hmode="route" wp="H4"/>
       <go from="H4" hmode="route" wp="H5"/>
       <deroute block="stay_p1"/>
-    </block> <!-- joezie 2020/03/30 NEW -->
+    </block> <!--  2020/03/30 NEW -->
     
   </blocks>
 </flight_plan>

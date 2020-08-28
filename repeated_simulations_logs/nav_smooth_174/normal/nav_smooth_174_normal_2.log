@@ -3935,8 +3935,8 @@
         <flight_plan security_height="25" name="Basic" max_dist_from_home="1500" lon0="1.27289" lat0="43.46223" ground_alt="185" alt="260">
           <header>#include &quot;subsystems/datalink/datalink.h&quot;
 #include &quot;modules/digital_cam/dc.h&quot;
-// #define LINE_START_FUNCTION dc_Survey(40); // joezie 2020/04/05 ORIGINAL
-// #define LINE_STOP_FUNCTION dc_autoshoot = DC_AUTOSHOOT_STOP; // joezie 2020/04/05 ORIGINAL</header>
+// #define LINE_START_FUNCTION dc_Survey(40); //  2020/04/05 ORIGINAL
+// #define LINE_STOP_FUNCTION dc_autoshoot = DC_AUTOSHOOT_STOP; //  2020/04/05 ORIGINAL</header>
           <waypoints>
             <waypoint y="0" x="0" name="HOME"/>
             <waypoint y="100.1" x="49.5" name="STDBY"/>

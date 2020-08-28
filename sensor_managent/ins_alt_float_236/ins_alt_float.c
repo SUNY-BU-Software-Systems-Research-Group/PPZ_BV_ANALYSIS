@@ -206,7 +206,7 @@ void ins_alt_float_update_baro(float pressure __attribute__((unused)))
 }
 #endif
 
-#include <stdio.h> // joezie 2020/04/15 NEW
+#include <stdio.h> //  2020/04/15 NEW
 
 void ins_alt_float_update_gps(struct GpsState *gps_s __attribute__((unused)))
 {
@@ -232,12 +232,12 @@ void ins_alt_float_update_gps(struct GpsState *gps_s __attribute__((unused)))
   uint32_t now_ts = get_sys_time_usec();
   // dt between this and last callback in seconds
 
-  // float dt = (float)(now_ts - last_ts) / 1e6; // joezie 2020/04/15 ORIGINAL
-  float dt = 200.0; // joezie 2020/04/15 NEW
+  // float dt = (float)(now_ts - last_ts) / 1e6; //  2020/04/15 ORIGINAL
+  float dt = 200.0; //  2020/04/15 NEW
   last_ts = now_ts;
 
   // bound dt (assume GPS freq between 0.5Hz and 50Hz)
-  Bound(dt, 0.02, 2) // joezie 2020/04/15 ORIGINAL
+  Bound(dt, 0.02, 2) //  2020/04/15 ORIGINAL
 #endif
 
   if (ins_altf.reset_alt_ref) {

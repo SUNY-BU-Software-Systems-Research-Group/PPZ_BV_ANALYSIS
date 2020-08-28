@@ -12,16 +12,16 @@
     <waypoint name="MOB" x="137.0" y="-11.6"/>
     <waypoint name="S1" x="-119.2" y="69.6"/>
     <waypoint name="S2" x="274.4" y="209.5"/>
-    <waypoint alt="215.0" name="AF" x="177.4" y="45.1"/> <!-- joezie 2020/04/06 ORIGINAL -->
-    <waypoint alt="185.0" name="TD" x="28.8" y="57.0"/> <!-- joezie 2020/04/13 ORIGINAL -->
+    <waypoint alt="215.0" name="AF" x="177.4" y="45.1"/> <!--  2020/04/06 ORIGINAL -->
+    <waypoint alt="185.0" name="TD" x="28.8" y="57.0"/> <!--  2020/04/13 ORIGINAL -->
     <waypoint name="_BASELEG" x="168.8" y="-13.8"/>
     <waypoint name="CLIMB" x="-114.5" y="162.3"/>
-    <!-- joezie 2020/04/04 BEGIN -->
+    <!--  2020/04/04 BEGIN -->
     <waypoint name="p1" x="3.6" y="-13.9"/>
     <waypoint name="p2" x="27.5" y="-48.2"/>
     <waypoint name="p3" x="16.7" y="-19.6"/>
     <waypoint name="p4" x="13.7" y="-40.7"/>
-    <!-- joezie 2020/04/04 END -->
+    <!--  2020/04/04 END -->
   </waypoints>
   <exceptions>
     <!--exception cond="datalink_time > 22" deroute="Standby"/-->
@@ -36,7 +36,7 @@
       <call_once fun="NavSetGroundReferenceHere()"/>
     </block>
     <block name="Holding point">
-      <set var="nav_mode" value="NAV_MODE_ROLL"/> <!-- joezie 2020/04/04 NEW -->
+      <set var="nav_mode" value="NAV_MODE_ROLL"/> <!--  2020/04/04 NEW -->
       <set value="1" var="autopilot.kill_throttle"/>
       <attitude roll="0" throttle="0" vmode="throttle"/>
     </block>
@@ -96,7 +96,7 @@
       <go from="p4" hmode="route" wp="p1"/>
       <stay wp="p1"/>
     </block>
-    <!-- joezie 2020/04/04 NEW -->
+    <!--  2020/04/04 NEW -->
     
   </blocks>
 </flight_plan>

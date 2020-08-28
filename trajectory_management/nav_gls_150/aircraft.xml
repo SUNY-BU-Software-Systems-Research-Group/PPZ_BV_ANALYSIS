@@ -199,11 +199,11 @@
     <module name="nav" type="bungee_takeoff"/>
 
 
-    <!-- Joezie 2020/04/05 BEGIN NEW -->
+    <!--  2020/04/05 BEGIN NEW -->
     <module name="nav" type="gls"> 
       <define name="APP_DISTANCE_AF_SD" value="1000"/>
     </module>
-    <!-- Joezie 2020/04/05 END NEW -->  
+    <!--  2020/04/05 END NEW -->  
 
   </firmware>
 

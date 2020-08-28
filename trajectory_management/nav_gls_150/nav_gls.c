@@ -48,7 +48,7 @@
 #include "modules/nav/nav_gls.h"
 #include "firmwares/fixedwing/nav.h"
 #include "generated/flight_plan.h"
-#include <stdio.h> // joezie 2020/04/05 NEW
+#include <stdio.h> //  2020/04/05 NEW
 
 float target_speed;
 float app_angle;
@@ -99,12 +99,12 @@ static inline bool gls_compute_TOD(uint8_t _af, uint8_t _sd, uint8_t _tod, uint8
 
   // calculate ground speed on final (target_speed - head wind)
   struct FloatVect2 *wind = stateGetHorizontalWindspeed_f();
-  wind->x = 17.0; // joezie 2020/05/09 NEW
-  wind->y = -6.0; // joezie 2020/05/09 NEW
+  wind->x = 17.0; //  2020/05/09 NEW
+  wind->y = -6.0; //  2020/05/09 NEW
   float wind_norm = sqrtf(wind->x * wind->x + wind->y * wind->y);
   float wind_on_final = wind_norm * (((td_af_x * wind->y) / (td_af * wind_norm)) +
                                      ((td_af_y * wind->x) / (td_af * wind_norm)));
-  Bound(wind_on_final, -MAX_WIND_ON_FINAL, MAX_WIND_ON_FINAL); // joezie 2020/04/05 ORIGINAL
+  Bound(wind_on_final, -MAX_WIND_ON_FINAL, MAX_WIND_ON_FINAL); //  2020/04/05 ORIGINAL
 
   gs_on_final = target_speed - wind_on_final;
 
@@ -152,7 +152,7 @@ bool gls_start(uint8_t _af, uint8_t _sd, uint8_t _tod, uint8_t _td)
   app_intercept_rate = ABS(app_intercept_rate);
   app_distance_af_sd = APP_DISTANCE_AF_SD;
 
-  Bound(app_distance_af_sd, 0, 200); // joezie 2020/04/06 ORIGINAL
+  Bound(app_distance_af_sd, 0, 200); //  2020/04/06 ORIGINAL
 
   // calculate Top Of Decent
   gls_compute_TOD(_af, _sd, _tod, _td);
@@ -184,7 +184,7 @@ bool gls_run(uint8_t _af, uint8_t _sd, uint8_t _tod, uint8_t _td)
                               (pos_enu->y - WaypointY(_tod)) * final_y) / final2;
 
 
-  Bound(nav_final_progress, -1, 1); // joezie 2020/04/06 ORIGINAL
+  Bound(nav_final_progress, -1, 1); //  2020/04/06 ORIGINAL
   //  float nav_final_length = sqrtf(final2);
 
   // calculate requiered decent rate on glideslope
@@ -200,7 +200,7 @@ bool gls_run(uint8_t _af, uint8_t _sd, uint8_t _tod, uint8_t _td)
                                   (pos_enu->y - WaypointY(_sd)) * 2 * sd_tod_y) /
                                  Max((sd_intercept * sd_intercept), 1.);
 
-  Bound(nav_intercept_progress, -1, 1); // joezie 2020/04/06 ORIGINAL
+  Bound(nav_intercept_progress, -1, 1); //  2020/04/06 ORIGINAL
   float tmp = nav_intercept_progress * sd_intercept / gs_on_final;
   float alt_intercept = WaypointAlt(_tod) - (0.5 * app_intercept_rate * tmp * tmp);
   float pre_climb_intercept = -nav_intercept_progress * hspeed * (tanf(app_angle));
@@ -213,24 +213,24 @@ bool gls_run(uint8_t _af, uint8_t _sd, uint8_t _tod, uint8_t _td)
   float alt = 0.;
 
   // distance
-  // f_af: distance between UAV and waypoint AF joezie 2020/04/06 NEW
+  // f_af: distance between UAV and waypoint AF  2020/04/06 NEW
   float f_af = sqrtf((pos_enu->x - WaypointX(_af)) * (pos_enu->x - WaypointX(_af)) +
                     (pos_enu->y - WaypointY(_af)) * (pos_enu->y - WaypointY(_af)));
   
   if (f_af < app_distance_af_sd) { // approach fix (AF) to start descent (SD)
-    // on the segment between AF and SD joezie 2020/04/06 NEW
+    // on the segment between AF and SD  2020/04/06 NEW
 
     alt = WaypointAlt(_af);
     pre_climb = 0.;
   } else if ((f_af > app_distance_af_sd) && (f_af < (app_distance_af_sd + sd_intercept))) {
-    // sd_intercept is double of the distance between TOD and SD joezie 2020/04/06 NEW
-    // on the segment around TOD with a distance of TOD-SD joezie 2020/04/06 NEW
+    // sd_intercept is double of the distance between TOD and SD  2020/04/06 NEW
+    // on the segment around TOD with a distance of TOD-SD  2020/04/06 NEW
 
     // start descent (SD) to intercept
     alt = alt_intercept;
     pre_climb = pre_climb_intercept;
   } else { //glideslope (intercept to touch down)
-    // on the segment after the segment above joezie 2020/04/06 NEW
+    // on the segment after the segment above  2020/04/06 NEW
 
     alt = alt_glideslope;
     pre_climb = pre_climb_glideslope;

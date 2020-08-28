@@ -22,7 +22,7 @@
       <define name="AHRS_H_Y" />
       <define name="AHRS_H_Z" />
     </module>
-    <!-- Joezie 2020/04/12 NEW -->  
+    <!--  2020/04/12 NEW -->  
 
 
     <module name="telemetry" type="transparent_udp"/>
@@ -36,7 +36,7 @@
       <define name="BEBOP_ACCEL_RANGE" value="MPU60X0_ACCEL_RANGE_16G"/>
     </module>
     <module name="gps" type="ublox"/>
-    <module name="stabilization" type="indi_simple"/> <!-- Joezie 2020/04/07 ORIGINAL -->
+    <module name="stabilization" type="indi_simple"/> <!--  2020/04/07 ORIGINAL -->
 
     <module name="ins" type="ekf2"/>
     

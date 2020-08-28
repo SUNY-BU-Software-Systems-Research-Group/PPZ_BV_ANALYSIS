@@ -31,7 +31,7 @@
     <module name="telemetry" type="transparent"/>
     <module name="control"/>
     <module name="imu" type="aspirin_v2.1"/>
-    <module name="ahrs" type="float_dcm"/> <!-- joezie 2020/04/13 ORIGINAL -->
+    <module name="ahrs" type="float_dcm"/> <!--  2020/04/13 ORIGINAL -->
     <module name="gps" type="ublox"/>
     <module name="navigation"/>
     <module name="ins" type="alt_float"/>

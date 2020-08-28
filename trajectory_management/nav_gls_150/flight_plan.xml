@@ -12,15 +12,15 @@
     <waypoint name="MOB" x="137.0" y="-11.6"/>
     <waypoint name="S1" x="-119.2" y="69.6"/>
     <waypoint name="S2" x="274.4" y="209.5"/>
-    <waypoint alt="215.0" name="AF" x="177.4" y="45.1"/> <!-- joezie 2020/04/06 ORIGINAL -->
-    <waypoint alt="185.0" name="TD" x="28.8" y="57.0"/> <!-- joezie 2020/04/13 ORIGINAL -->
+    <waypoint alt="215.0" name="AF" x="177.4" y="45.1"/> <!--  2020/04/06 ORIGINAL -->
+    <waypoint alt="185.0" name="TD" x="28.8" y="57.0"/> <!--  2020/04/13 ORIGINAL -->
     <waypoint name="_BASELEG" x="168.8" y="-13.8"/>
     <waypoint name="CLIMB" x="-114.5" y="162.3"/>
 
-    <!-- joezie 2020/04/05 BEGIN -->
+    <!--  2020/04/05 BEGIN -->
     <waypoint name="SD" x="900." y="48."/>
     <waypoint name="TOD" x="900." y="48."/>
-    <!-- joezie 2020/04/05 END -->
+    <!--  2020/04/05 END -->
   </waypoints>
   <exceptions>
     <!--exception cond="datalink_time > 22" deroute="Standby"/-->
@@ -35,7 +35,7 @@
       <call_once fun="NavSetGroundReferenceHere()"/>
     </block>
     <block name="Holding point">
-      <set var="nav_mode" value="NAV_MODE_ROLL"/> <!-- joezie 2020/04/04 NEW -->
+      <set var="nav_mode" value="NAV_MODE_ROLL"/> <!--  2020/04/04 NEW -->
       <set value="1" var="autopilot.kill_throttle"/>
       <attitude roll="0" throttle="0" vmode="throttle"/>
     </block>
@@ -97,7 +97,7 @@
       <exception cond="GetAltRef() + 10 > GetPosAlt()" deroute="flare"/>
       <call fun="gls_run(WP_AF, WP_SD, WP_TOD, WP_TD)"/>
     </block>
-    <!-- joezie 2020/04/05 NEW -->
+    <!--  2020/04/05 NEW -->
 
     
   </blocks>

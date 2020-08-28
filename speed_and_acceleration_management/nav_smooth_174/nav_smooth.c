@@ -32,7 +32,7 @@
 #include "state.h"
 #include "firmwares/fixedwing/nav.h"
 #include "subsystems/gps.h"
-#include <stdio.h> // joezie 2020/04/05
+#include <stdio.h> //  2020/04/05
 
 #define Sign(_x) ((_x) > 0 ? 1 : (-1))
 #define Norm2Pi(x) ({ uint8_t _i=1; float _x = x; while (_i && _x < 0.) { _i++;_x += 2*M_PI; } while (_i && _x > 2*M_PI) { _i++; _x -= 2*M_PI; } _x; })
@@ -172,9 +172,9 @@ static void compute_ground_speed(float airspeed,
     /* g^2 -2 scal g + c = 0 */
     float scal = wind_east * cos(alpha) + wind_north * sin(alpha);
     float delta = 4 * (scal * scal - c);
-    // ground_speeds[i] = scal + sqrt(delta) / 2.; // joezie 2020/04/05 ORIGINAL
-    ground_speeds[i] = scal + sqrt(fabs(delta)) / 2.; // joezie 2020/04/05 NEW
-    Bound(ground_speeds[i], NOMINAL_AIRSPEED / 4, 2 * NOMINAL_AIRSPEED); // joezie 2020/04/05 ORIGINAL
+    // ground_speeds[i] = scal + sqrt(delta) / 2.; //  2020/04/05 ORIGINAL
+    ground_speeds[i] = scal + sqrt(fabs(delta)) / 2.; //  2020/04/05 NEW
+    Bound(ground_speeds[i], NOMINAL_AIRSPEED / 4, 2 * NOMINAL_AIRSPEED); //  2020/04/05 ORIGINAL
   }
 }
 
@@ -199,10 +199,10 @@ bool snav_on_time(float nominal_radius)
   if (ground_speed_timer == 0) {
     ground_speed_timer = 40; /* every 10s, called at 40Hz */
     // compute_ground_speed(airspeed, stateGetHorizontalWindspeed_f()->y,
-    //                     stateGetHorizontalWindspeed_f()->x); // Wind in NED frame // joezie 2020/04/05 ORIGINAL
-    compute_ground_speed(airspeed, -5.0, 5.0); // joezie 2020/04/05 NEW
+    //                     stateGetHorizontalWindspeed_f()->x); // Wind in NED frame //  2020/04/05 ORIGINAL
+    compute_ground_speed(airspeed, -5.0, 5.0); //  2020/04/05 NEW
     compute_ground_speed(airspeed, 100.0 * stateGetHorizontalWindspeed_f()->y,
-                         100.0 * stateGetHorizontalWindspeed_f()->x); // joezie 2020/04/05 NEW
+                         100.0 * stateGetHorizontalWindspeed_f()->x); //  2020/04/05 NEW
     
   }
   ground_speed_timer--;

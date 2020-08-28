@@ -18,7 +18,7 @@
     <module name="vertical_ctrl_module_demo"> 
       <define name="VERTICAL_CTRL_MODULE_PGAIN" value="100000.0"/>
       <define name="VERTICAL_CTRL_MODULE_IGAIN" value="100000.0"/>
-    </module> <!-- Joezie 2020/04/11 NEW -->  
+    </module> <!--  2020/04/11 NEW -->  
 
     <module name="telemetry" type="transparent_udp"/>
     <module name="radio_control" type="datalink"/>

@@ -94,7 +94,7 @@
       <call_once fun="NavResurrect()"/>
       <call_once fun="nav_set_heading_towards_waypoint(WP_CAM)"/>
       <circle radius="nav_radius" wp="CAM"/>
-    </block> <!-- joezie 2020/03/30 NEW -->
+    </block> <!--  2020/03/30 NEW -->
 
   </blocks>
 </flight_plan>
